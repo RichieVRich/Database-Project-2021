@@ -1,0 +1,11 @@
+<h1>Enter information</h1>
+<form id="addgame" action='/game' method='post'>
+     Title: <input type="text" name="title">
+     genre: <input type="text" name="gname">
+     image: <input type="text" name="image">
+{{#each developer}}
+     developer: <option value="{{id}}>{{dname}}</option>
+{{/each}}
+    <br>
+     <input type="submit" value="Submit"></form>
+    <br/>

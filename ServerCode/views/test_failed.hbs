@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+    <header>
+        <div class="header-image-container">
+            <img src="https://vignette.wikia.nocookie.net/ssb/images/8/80/Universes.jpg/revision/latest?cb=20150922200246" alt="Smash logo">
+        </div>
+        <h1 class="site-title"><a href='/'>Frozium</a></h1>
+    </header>
+
+    {{#each vg}}
+        <anotheraside class="post-container3">
+            <div class="post" data-Name="{{name}}" data-main="{{main}}" data-time="{{time}}" data-type="{{type}}" data-amount="{{amount}}">
+                <div class="post-contents3">
+                    <div class="post-info-container3">
+                        <div class="header-image-container">
+                            <img src={{image}} alt="logo">
+                            <div>
+                                <a href="#" class="post-title"></a> <span class="post-name">{{title}}</span>
+                                <div>
+                                    <a href="#" class="post-title"></a> <span class="post-type">Feature Coming Soon!</span>
+                                    <div>
+                                        <a href="#" class="post-title"></a> <span class="post-type">{{gname}}</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+        </anotherside>
+
+    {{/each}}
+
+
+
+</html>

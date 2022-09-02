@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<h1>Enter information</h1>
+<form id="addgame" action='/game' method='post'>
+     Title: <input type="text" name="title">
+     genre: <select id='list_gen' name='gen'>
+        {{#each gen}}
+            <option value="{{id}}">{{gname}}</option>
+        {{/each}}
+     ====|||===
+     image: <input type="text" name="image">
+
+     developer:<select id='list_dev' name='dev'>
+      <option value="0">Not Mentioned</option>
+
+{{#each developer}}
+      <option value="{{id}}" name='dname'>{{dname}}</option>
+{{/each}}
+    <br>
+     <input type="submit" value="Submit"></form>
+    <br/>
+
+</html>

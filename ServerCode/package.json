@@ -1,0 +1,31 @@
+{
+  "name": "richard",
+  "version": "1.0.0",
+  "description": "",
+  "main": "main.js",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "express": "^4.17.1",
+    "express-handlebars": "^2.0.1",
+    "mysql": "^2.18.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/RichieVRich/Backend-front.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/RichieVRich/Backend-front/issues"
+  },
+  "homepage": "https://github.com/RichieVRich/Backend-front#readme"
+  "dependencies":{
+      "mysql"
+      "express"
+      "express-handlebars"
+      "body-parser"
+}

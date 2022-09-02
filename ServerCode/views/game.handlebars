@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html>
+
+    <header>
+
+      <div class="header-image-container">
+        <img src="https://vignette.wikia.nocookie.net/ssb/images/8/80/Universes.jpg/revision/latest?cb=20150922200246" alt="Smash logo">
+      </div>
+
+      <h1 class="site-title"><a href='/'>Frozium</a></h1>
+
+    </header>
+    <h2>
+      Welcome to Froum! Keep track of the most popular games and see what your favorite content creator is playing!
+    </h2>
+
+    {{#each vg}}
+    <anotheraside class="post-container4">
+      <div class="post" data-Name="{{name}}" data-main="{{main}}" data-time="{{time}}" data-type="{{type}}" data-amount="{{amount}}">
+        <div class="post-contents4">
+            <div class="post-info-container4">
+              <div class="header-image-container">
+                  <p>{{id}}</p>
+    <a href="/game/{{id}}">Update</a>
+                  <img src="{{image}}" alt="logo">
+                <div>
+                    <a href="#" class="post-title"></a> <span class="post-name">{{title}}</span>
+                    <div>
+                        <a href="#" class="post-title"></a> <span class="post-type">Feature Coming Soon</span>
+                        <div>
+                            <a href="#" class="post-title"></a> <span class="post-type">{{gname}}</span>
+                        </div>
+                    </div>
+                </div>
+              </div>
+            </div>
+        </div>
+      </div>
+    </anotheraside>
+    {{/each}}
+
+    <anotheraside class="post-container4">
+      <div class="post" data-Name="{{name}}" data-main="{{main}}" data-time="{{time}}" data-type="{{type}}" data-amount="{{amount}}">
+        <div class="post-contents4">
+            <div class="post-info-container4">
+              <div class="header-image-container">
+                <div>
+                    <div>
+                        <div id="addform">
+                            <td> <a href="/game/add">Add</button></td>
+                        </div>
+                    </div>
+                </div>
+              </div>
+            </div>
+        </div>
+      </div>
+    </anotheraside>
+
+
+    <!-- POST BUTTON -->
+<section>
+    <button type="button" id="post-button" onClick="" ><i class="fas
+    fa-plus"></i></button>
+
+    <div id="modal-backdrop1" class="hidden1">
+    <div id="post-modal1" class="hidden1">
+      <div class="modal-dialog1">
+
+        <div class='modal-header1'>
+          <h2>Add your game!</h2>
+        </div>
+
+        <div class="modal-body1">
+
+          <div class="post-input-element">
+            <label for="post-text-input">Game</label>
+            <input type="text" id="post-name-input"></input>
+          </div>
+
+          <div class="post-input-element">
+            <label for="post-text-input">Username</label>
+            <input type="text" id="post-main-input"></input>
+          </div>
+
+
+        <div class="post-input-element">
+            <fieldset id="post-type-fieldset" class="post-fieldset">
+              <legend>Genre</legend>
+              <div>
+                <input type="radio" name="post-type" id="post-type-ForFun" value="FPS" checked>
+                <label for="post-type-ForFun">FPS</label>
+              </div>
+              <div>
+                <input type="radio" name="post-type" id="post-type-tournament" value="MMO">
+                <label for="post-type-tournament">MMO</label>
+              </div>
+              <div>
+                <input type="radio" name="post-type" id="post-type-tournament" value="Other">
+                <label for="post-type-tournament">Other</label>
+                <a href="#" class="post-title"></a><input type="text" id="post-main-input"></input>
+              </div>
+            </fieldset>
+          </div>
+
+          <div class="modal-footer1">
+          <button type="button" id="modal-cancel1" class="modal-hide-button action-button">Cancel</button>
+          <button type="button" id="modal-accept1" class="action-button">Add Game</button>
+          </div>
+
+      </div>
+    </div>
+        </section>
+
+    <!-- FILTER BUTTON -->
+    <section>
+    <button type="button" id="filter-button"><i class="fas fa-filter"></i></button>
+
+    <div id="modal-backdrop" class="hidden">
+      <div id="filter-modal" class="hidden">
+        <div class="modal-dialog">
+
+          <div class='modal-header'>
+            <h3> Filter </h3>
+          </div>
+
+          <div class="modal-body">
+
+          <div class="filter-input-element">
+              <label for="filter-text">Game Name</label>
+              <input type="text" id="filter-text"></input>
+            </div>
+
+            <div class="filter-input-element">
+              <label for="filter-name">Username</label>
+              <input type="text" id="filter-time"></input>
+            </div>
+
+            <div class="filter-input-element">
+              <label for="filter-time">Date Released</label>
+              <input type="text" id="filter-time"></input>
+            </div>
+
+          <div class="filter-input-element">
+            <fieldset id="filter-type-fieldset" class="filter-fieldset">
+              <legend>Type</legend>
+              <div>
+                <input type="radio" name="filter-type" id="post-type-ForFun" value="Any" checked>
+                <label for="post-type-ForFun">Any</label>
+              </div>
+              <div>
+                <input type="radio" name="filter-type" id="filter-type-ForFun" value="FPS" checked>
+                <label for="filter-type-ForFun">FPS</label>
+              </div>
+              <div>
+                <input type="radio" name="filter-type" id="filter-type-tournament" value="MMO">
+                <label for="filter-type-tournament">MMO</label>
+              </div>
+              <div>
+                <input type="radio" name="post-type" id="post-type-tournament" value="Other">
+                <label for="post-type-tournament">Other</label>
+                <a href="#" class="post-title"></a><input type="text" id="post-main-input"></input>
+              </div>
+            </fieldset>
+          </div>
+
+        </div>
+
+  <!-- Delete Button
+    <section>
+    <button type="button" id="delete-button"><i class="fas fa-minus"></i></button>
+
+      <div id="modal-backdrop2" class="hidden2">
+        <div id="filter-modal2" class="hidden2">
+          <div class="modal-dialog2">
+
+            <div class='modal-header'>
+              <h3> Delete </h3>
+            </div>
+      </section>
+  -->
+
+        <div class="modal-footer">
+          <button type="button" id="modal-cancel" class="modal-hide-button action-button">Cancel</button>
+          <button type="button" id="modal-accept" class="action-button">Update</button>
+        </div>
+      </div>
+    </div>
+  </div>
+    </section>
+
+</html>

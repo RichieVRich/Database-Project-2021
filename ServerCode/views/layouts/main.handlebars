@@ -1,0 +1,22 @@
+<!doctype html>
+<html>
+<head>
+	<title>Frozium</title>
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+    {{#each jsscripts}}
+    <script src="/static/{{this}}"></script>
+    {{/each}}
+    <script src="/static/homebar.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Roboto|Roboto+Slab:100" rel="stylesheet">
+    <link href="style.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css" crossorigin="anonymous">
+
+</head>
+<body>
+<div class="home_bar">
+    <button onClick="goTo('shop')">shop</button>
+    <button onClick="goTo('game')">game</button>
+</div>
+	{{{body}}}
+</body>
+</html>

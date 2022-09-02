@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<h3>Add new people:</h3>
+
+    <form id="adddev" action="/shop" method="post">
+      Developer Name: <input type="text" name="dname">
+    <br>
+     <input type="submit" value="Submit"></form>
+    <br/>
+
+
+
+<form id='filter_dev' action='' method=''>
+    <label>Filter attempt</label>
+    <select id='dev_filter' name='dev'>
+        <option value="0">none</option>
+
+        {{#each developer}}
+        <option value="{{id}}">{{dname}}</option>
+        {{/each}}
+    </select>
+    <input type="button" value="Filter" onclick="filterGameByDev()">
+</form>
+
+
+
+
+
+<h3> Current Developers</h3>
+<table>
+    <thead>
+        <th>Developer Name</th>
+    </thead>
+
+    <tbody>
+
+        {{#each developer}}
+        <tr>
+            <td>{{dname}}</td>
+            <td><button onClick="deleteDev({{id}})"> Delete</button></td>
+            <td><a href="/shop/{{id}}">Update</a></td>
+        </tr>
+        {{/each}}
+    </tbody>
+</table>
+
+<h3> Current Games</h3>
+<table>
+    <thead>
+        <th>Game Titles</th>
+    </thead>
+
+    <tbody>
+    {{#each vg}}
+    <tr>
+        <td>{{title}}</td>
+        <td>{{releasedate}}</td>
+        <td>{{gname}}</td>
+        <td>{{dname}}</td>
+    </tr>
+    {{/each}}
+    </tbody>
+</table>
+</html>

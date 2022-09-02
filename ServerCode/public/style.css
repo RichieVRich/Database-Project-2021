@@ -1,0 +1,600 @@
+/* NOTES
+-The buttons don't currently pop up the post page and filter page cause they need the JS to work, look at assignment 3 to see how to unhide them if you are having trouble
+
+/*
+
+HEADER, TITLE, TEXT
+
+*/
+body {
+    font-family: 'georgia', serif;
+    margin: 0;
+    /*background-color: rgb(47,49,54);*/
+    background-color: rgb(54,57,63);
+    color: white;
+  }
+  
+  a {
+    text-decoration: none;
+    color: white;
+  }
+  
+  a:hover {
+    text-decoration: underline;
+  
+  }
+  
+  header {
+    background-color: #000;
+    display: flex;
+    height: 150px;
+    align-items: center;
+    position: relative;
+    margin-bottom: 20px;
+  }
+
+  h2{
+    margin-left: 89px;
+  }
+
+  anotheraside{
+    margin-left: 80px;
+  }
+  
+  img{
+    height: 150px;
+  }
+  
+  header a {
+    color: #fff;
+  }
+  
+  .site-title {
+    font-family: "Copperplate", fantasy;
+  
+    font-size: 80px;
+    font-weight: 100;
+    margin: 0 0 0 20px;
+    padding-top: 30px;
+  }
+  
+  .site-title a:hover {
+    text-decoration: none;
+  }
+  
+  .content {
+    display: flex;
+  }
+  
+  aside{
+    background-color: rgb(47,49,54);
+  }
+  
+  /*
+  
+  CHAT BOX
+  
+  */
+  #bodybox {
+    position: relative;
+    //display: flex;
+    width: 300%;
+    flex-direction: row;
+    margin-top: auto;
+    padding: 45px;
+   /*
+    font: 15px arial, sans-serif;
+    background-color: rgb(54,57,63);
+    border-style: solid;
+    border-width: 1px;
+    padding-top: 20px;
+    padding-bottom: 1px;
+    padding-right: 25px;
+    padding-left: 25px;
+    border-radius: 15px;*/
+  }
+  
+  /* Extra border, not needed
+  #chatborder {
+    border-style: solid;
+    background-color: #f6f9f6;
+    border-width: 3px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-left: 10px;
+    margin-right: 10px;
+    padding-top: 400px;
+    padding-bottom: 10px;
+    padding-right: 20px;
+    padding-left: 15px;
+    border-radius: 15px;
+  }*/
+  
+  .chatlog {
+    font: 15px arial, sans-serif;
+  
+  }
+  
+  #chatbox {
+    /*
+    font: 17px arial, sans-serif;
+    height: 22px;
+    //width: fit;
+    border-radius: 5px;
+    background-color: rgb(72,76,82);
+    */
+    width: 100%;
+      height: 20px;
+      background: #40454a;
+      border: 0;
+      border-radius: 10px;
+      padding: 10px;
+    color: #fff;
+  }
+  
+  /*
+  
+  POSTS
+  Title - Name of person (Add "'s Game" at the end of their name)
+  Main - Main character they use (Add "Main- " at the beginning)
+  Time- Time frame (Add "Time Frame- " at the beginning)
+  Type - Tournament or For Fun (Add "Type- " at the beginning)
+  Hopefully want it to extend down
+  */
+  .post {
+    display: inline-block;
+    vertical-align: top;
+    height: 300px;
+    width: 300px;
+    margin: 10px;
+    padding: 10px;
+    border: 1px solid #ffffff;
+    border-radius: 3px;
+    left: 20px;
+  }
+  
+  .post-contents {
+    font-family: 'georgia', serif;
+    font-size: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    right: 10px;
+  }
+  
+  .post-title {
+    display: block;
+    padding: 3px;
+    margin: 3px 7px;
+  }
+  
+  .post-main {
+    display: inline-block;
+    padding: 3px;
+    margin: 3px 5px;
+  }
+  
+  .post-time {
+    display: inline-block;
+    padding: 3px;
+    margin: 3px 5px;
+  }
+  
+  .post-type {
+    display: inline-block;
+    padding: 3px;
+    margin: 3px 5px;
+  }
+  
+  .post-amount {
+    display: inline-block;
+    padding: 3px;
+    margin: 3px 5px;
+  }
+  
+  /*
+  
+  WEBPAGE FOR POSTS
+  
+  */
+  .content2{
+      display: flex;
+  }
+  
+  .post2{
+    display: inline-block;
+    vertical-align: top;
+    height: 500px;
+    width: 100%;
+    margin: 10px;
+    padding: 10px;
+    border-top: 1px solid #ffffff;
+    border-bottom: 1px solid #ffffff;
+    
+  }
+  
+  .post-contents2 {
+    font-family: 'georgia', serif;
+    font-size: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+  }
+  
+  .post-title2 {
+    display: block;
+    padding: 3px;
+    margin: 3px 5px;
+  }
+  
+  .post-main2 {
+    display: inline-block;
+    padding: 3px;
+    margin: 3px 5px;
+  }
+  
+  .post-time2 {
+    display: block;
+    padding: 3px;
+    margin: 3px 5px;
+  }
+  
+  .post-type2 {
+    display: inline-block;
+    padding: 3px;
+    margin: 3px 5px;
+  }
+  
+  .post-amount2 {
+    display: block;
+    padding: 3px;
+    margin: 3px 5px;
+  }
+  
+  
+  /*
+  
+  BUTTON FOR CREATING POSTS
+  
+  */
+  #post-button {
+    position: fixed;
+    left: 15px;
+    bottom: 30px;
+    height: 60px;
+    width: 60px;
+    border: none;
+    border-radius: 30px;
+    font-size: 36px;
+    background-color: #000000;
+    color: #fff;
+    cursor: pointer;
+    box-shadow: 4px 4px 12px rgba(0, 0, 0, 0.25);
+  }
+  
+  #post-button:hover,
+  #post-button:focus {
+    /* right: 27px;
+    bottom: 27px;
+    height: 66px;
+    width: 66px;
+    border-radius: 33px;
+    font-size: 40px; */
+    transform: scale(1.25);
+  }
+  
+  #post-button:focus {
+    outline: none;
+  }
+
+
+  /*
+  
+  BUTTON FOR FILTERS
+  
+  */
+  #filter-button {
+    position: fixed;
+    left: 15px;
+    bottom: 120px;
+    height: 60px;
+    width: 60px;
+    border: none;
+    border-radius: 30px;
+    font-size: 36px;
+    background-color: #000000;
+    color: #fff;
+    cursor: pointer;
+    box-shadow: 4px 4px 12px rgba(0, 0, 0, 0.25);
+  }
+  
+  #filter-button:hover,
+  #filter-button:focus {
+    /* right: 27px;
+    bottom: 127px;
+    height: 66px;
+    width: 66px;
+    border-radius: 33px;
+    font-size: 40px; */
+    transform: scale(1.25);
+  }
+  
+  #filter-button:focus {
+    outline: none;
+  }
+  
+  
+  /*
+  
+  POST MODAL NEEDS JS
+  
+  */
+  #modal-backdrop1 {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    background-color: rgba(0, 0, 0, 0.85);
+  }
+  
+  #post-modal {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 1010;
+    overflow: scroll;
+  }
+  
+  .hidden1 {
+    display: none;
+  }
+  
+  .modal-dialog1 {
+    width: auto;
+    max-width: 600px;
+    min-width: 350px;
+    min-height: 300px;
+    margin: 40px auto;
+    background-color: #36393f;
+    border-radius: 15px;
+  }
+  
+  .modal-header1 {
+    position: relative;
+    padding: 10px 20px;
+  }
+  
+  .modal-header1 h3 {
+    margin: 0;
+    font-size: 28px;
+  }
+  
+  #modal-close1 {
+    position: absolute;
+    right: 10px;
+    top: 5px;
+    font-size: 24px;
+    border: none;
+    background: none;
+    padding: 0;
+    cursor: pointer;
+  
+  }
+  
+  .modal-body1 {
+    padding: 20px;
+  }
+  
+  .post-input-element {
+    display: flex;
+    align-items: center;
+    font-size: 20px;
+    margin: 10px 0;
+  
+  }
+  
+  .post-input-element > label {
+    font-weight: 600;
+    flex: 1 75px;
+    margin-right: 10px;
+  
+  
+  }
+  
+  .post-input-element input {
+    flex: 6 200px;
+    padding: 8px;
+    font-size: 20px;
+    border: 1px solid #aaa;
+  
+    height: 20px;
+    background: #40454a;
+    border: 0;
+    border-radius: 10px;
+    padding: 10px;
+    color: #fff;
+  }
+  
+  .post-fieldset {
+    flex: 1 100%;
+    border: 1px solid #ababab;
+  }
+  
+  .modal-footer1 {
+    display: flex;
+    justify-content: flex-end;
+    padding: 10px 10px 20px 10px;
+  }
+  
+  #modal-cancel1,
+  #modal-accept1 {
+    margin-right: 20px;
+  
+    color: #fff;
+    background-color: #fff;
+    height: 40px;
+    background: #40454a;
+    border: 0;
+    border-radius: 10px;
+    padding: 10px;
+  }
+  
+  #modal-cancel1 {
+    color: #fff;
+    background-color: #fff;
+  
+    
+    height: 40px;
+    background: #40454a;
+    border: 0;
+    border-radius: 10px;
+    padding: 10px;
+  }
+  
+  #modal-cancel1:hover {
+    background-color: rgb(33,33,33);
+  }
+  
+  #modal-accept1:hover {
+    background-color: rgb(33,33,33);
+  }
+  
+  #modal-backdrop {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    background-color: rgba(0, 0, 0, 0.85);
+  }
+  
+  #filter-modal {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 1010;
+    overflow: scroll;
+  }
+  
+  .hidden {
+    display: none;
+  }
+  
+  .modal-dialog {
+    width: auto;
+    max-width: 600px;
+    min-width: 350px;
+    min-height: 300px;
+    margin: 40px auto;
+    background-color: #36393f;
+    border-radius: 15px;
+  }
+  
+  .modal-header {
+    position: relative;
+    padding: 10px 20px;
+  }
+  
+  .modal-header h3 {
+    margin: 0;
+    font-size: 28px;
+  }
+  
+  #modal-close {
+    position: absolute;
+    right: 10px;
+    top: 5px;
+    font-size: 24px;
+    border: none;
+    background: none;
+    padding: 0;
+    cursor: pointer;
+  }
+  
+  .modal-body {
+    padding: 20px;
+  }
+  
+  .filter-input-element {
+    display: flex;
+    align-items: center;
+    font-size: 20px;
+    margin: 10px 0;
+  }
+  
+  .filter-input-element > label {
+    font-weight: 600;
+    flex: 1 75px;
+    margin-right: 40px;
+  }
+  
+  .filter-input-element input {
+    flex: 6 200px;
+    padding: 8px;
+    font-size: 20px;
+    border: 1px solid #aaa;
+  
+    height: 20px;
+    background: #40454a;
+    border: 0;
+    border-radius: 10px;
+    padding: 10px;
+    color: #fff;
+  }
+  
+  
+  .filter-fieldset {
+    flex: 1 100%;
+    border: 1px solid #ababab;
+  
+  }
+  
+  .modal-footer {
+    display: flex;
+    justify-content: flex-end;
+    padding: 10px 10px 20px 10px;
+  }
+  
+  #modal-cancel,
+  #modal-accept {
+    margin-right: 20px;
+  
+    color: #fff;
+    height: 40px;
+    background: #40454a;
+    border: 0;
+    border-radius: 10px;
+    padding: 10px;
+  }
+  
+  #modal-cancel {
+    color: #fff;
+    background-color: #fff;
+  
+    height: 40px;
+    background: #40454a;
+    border: 0;
+    border-radius: 10px;
+    padding: 10px;
+  }
+  
+  #modal-cancel:hover {
+    background-color: rgb(33,33,33);
+  
+  }
+  
+  #modal-accept:hover {
+    background-color: rgb(33,33,33);
+  
+  }

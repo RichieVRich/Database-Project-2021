@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<h3>Show me all!</h3>
+
+<h3>Current Developers:</h3>
+{{#each dev}}
+<table>
+    <thead>
+    </thead>
+    <tbody>
+    <tr>
+        <td>{{dname}}</td>
+    </tr>
+    </tbody>
+</table>
+
+{{/each}}
+<h3>Current Genre:</h3>
+{{#each genre}}
+<table>
+    <thead>
+    </thead>
+    <tbody>
+    <tr>
+        <td>{{gname}}</td>
+    </tr>
+    </tbody>
+</table>
+{{/each}}
+<h3>Current Publisher:</h3>
+{{#each pub}}
+<table>
+    <thead>
+    </thead>
+    <tbody>
+    <tr>
+        <td>{{pname}}</td>
+    </tr>
+    </tbody>
+</table>
+{{/each}}
+<h3>Current Mode:</h3>
+{{#each mode}}
+<table>
+    <thead>
+    </thead>
+    <tbody>
+    <tr>
+        <td>{{mode}}</td>
+    </tr>
+    </tbody>
+</table>
+{{/each}}
+<h3>Current VG:</h3>
+<table>
+    <thead>
+        <th>Game Titles</th>
+    </thead>
+
+    <tbody>
+    {{#each vg}}
+    <tr>
+        <td>{{title}}</td>
+        <td>{{pname}}</td>
+        <td>{{releasedate}}</td>
+        <td>{{gname}}</td>
+        <td>{{dname}}</td>
+        <td>{{mode}}</td>
+    </tr>
+    {{/each}}
+    </tbody>
+</table>
+
+
+</html>
+
