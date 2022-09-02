@@ -1,4 +1,14 @@
 Project was done for Intro to Databases at Oregon State University 
-Demostrates creating an Outline
-Create New ideas
-Working with Entity-Relationship Diagram and converting into Data Definition Language.
+The project was to demonstrate: 
+Design and Implement a Simple to Moderately Complex Database
+Document Design and queries in standardized notation. 
+Formulate SQL Statements for data manipulation
+Create a relational database from relational schema
+Create multiple indices in a relational database and explain when and why such indices are appropriate
+Model moderately complex data set by using an ER and UML diagram and derive a relational schema from that diagram 
+Describe the difference between a relational database and a flat file. 
+Formulate simple queries in relation algebra by using projection, selection, product and join operations
+Describe components and interfaces of Web-Based database system
+Design and implement a web based relational database system using one or more scripting languages and an open-source database development system.
+
+I also included a Relational algebra and its relation to SQL assigment. 
